@@ -1,0 +1,407 @@
+\documentclass[11pt]{book}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage[spanish,mexico,es-nolayout]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{tkz-berge}
+
+\usepackage{makeidx}
+
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{corollary}{Corolario}
+\newtheorem{proposition}{Proposición}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}{Definición}
+\newtheorem{notation}{Notación}
+\newtheorem{example}{Ejemplo}
+\newtheorem{demostration}{Demostración}
+\newcommand{\beao}{\begin{eqnarray*}} %Para centrar y no enumerar ecuaciones
+\newcommand{\eeao}{\end{eqnarray*}}
+\newcommand{\bea}{\begin{eqnarray}}   %Para centrar y enumerar ecuaciones
+\newcommand{\eea}{\begin{eqnarray}}
+\newcommand\N{{\mathbb N}}
+
+\newcounter{in}
+\newcounter{ini}
+
+\makeindex
+
+
+
+
+
+
+\begin{document}
+
+\title{Title}
+\author{Jesús Simón Mejía Cruz}
+\date{}
+\maketitle
+
+
+\newpage
+\thispagestyle{empty}
+ \chapter*{Agradecimientos}
+
+ Aquí van los agradecimientos
+
+
+
+\newpage
+ \thispagestyle{empty}
+
+
+
+
+
+ \chapter{Introducción}
+
+
+Aqui va la introduccion  
+
+
+
+\tableofcontents
+
+
+
+
+\chapter{Conceptos básicos}
+
+Aqui va una introduccion a los conceptos basicos
+
+
+\section{Gráficas}
+
+En esta sección se encuentran algunas definiciones necesarias de la teoria de gráficas.
+
+
+\begin{definition}\textbf{Gráfica}\index{Gráficas}
+
+Una gráfica $G$ es un par ordenado de conjuntos
+$G=\{V(G),E(G)\}$ donde $V(G)$ es un conjunto
+finito, llamado vértices de $G$, y
+
+\begin{equation*}
+ E(G) \subseteq
+V(G)^{(2)}=\{e\subseteq V(G) \mid |e|=2\}
+\end{equation*}
+\end{definition}
+
+
+\begin{definition}\textbf{Complemento de una gráfica}\\\index{Complemento de una gráfica}
+Si G es una gráfica, definimos $\overline{G}$, el complemento de G
+como
+
+\begin{equation*}
+V(\overline{G})=V(G)\\
+E(\overline{G})=V(G)^{(2)}\setminus E(G)
+\end{equation*}
+\end{definition}
+
+
+
+\begin{definition}\textbf{Orden de una gráfica}\\\index{Orden de una gráfica}
+El orden $|G|$ de una gráfica $G$ es $|V(G)|$.
+\end{definition}
+
+\begin{definition}\textbf{Vértices adyacentes}\\\index{Vértices adyacentes}
+Sea $G$ una gráfica, si $x , y \in V(G)$ tal que
+$\{x,y\}\in E(G)$ diremos que $x$ y $y$ son adyacentes.
+\end{definition}
+
+En algunas ocasiones, aunque de manera no tan formal, también se les
+conoce como vecinos o amigos.
+
+
+
+
+\begin{definition}\textbf{Isomorfismo}\\\index{Isomorfismo}
+Sean $G_1,G_2$ dos gráficas, un isomorfismo de
+$G_1,G_2$ es una función biyectiva $f:
+V(G_1)\rightarrow V(G_2)$ tal que $x\thicksim y$ en
+$G_1$ si y solo si $f(x)\thicksim f(y)$ en $G_2$.
+\end{definition}
+
+
+\begin{definition}\textbf{Gráficas isomorfas}\\\index{Gráficas isomorfas}
+Sean $G_1,G_2$ dos gráficas, si existe un isomorfismo
+entre $G_1$ y $G_2$, decimos que $G_1$ y $G_2$
+son isomorfas.
+\end{definition}
+
+
+\begin{definition}\textbf{Automorfismo}\\\index{Automorfismo}
+Un isomorfismo de $G$ en $G$ se llama automorfismo de
+$G$.
+\end{definition}
+
+
+
+
+
+\subsection{Familias de gráficas}
+
+
+\begin{definition}\textbf{Gráfica completa}\\\index{Gráfica completa}
+La gráfica con n vértices y todas las aristas posibles se llama
+gráfica completa y se denota $K_n$ con $n\geq 1$.
+\end{definition}
+
+
+
+\begin{definition}\textbf{Unión disjunta}\\\index{Unión disjunta}
+Dadas dos gráficas $G$ y $H$, definimos la unión disjunta $G\cup H$ como
+$$V(G\cup H)=V(G)\dot{\cup}V(H)$$ $$E(G\cup H)=E(G)\dot{\cup}E(H)$$
+\end{definition}
+
+$G\bigcup G$ se denota por $2G$. En general $G\bigcup ...\bigcup G$
+n veces, se denota $nG$. \index{nG}
+
+
+
+\begin{definition}\textbf{Gráfica $nK_m$}\\\index{Gráfica nK_m}
+A la unión disjunta de n gráficas $K_m$, se le denota por $nK_m$
+\end{definition}
+
+
+\begin{definition}\textbf{Subgráfica}\\\index{Subgráfica}
+Una gráfica $H$ es subgráfica de $G$ si $V(H)\subseteq V(G)$ y
+$E(H)\subseteq E(G)$.
+\end{definition}
+
+
+
+
+\subsection{Clanes}
+
+\begin{definition}\textbf{Clan}\\\index{Clan}
+Un clan es una subgráfica completa maximal.
+\end{definition}
+
+Es decir, es una subgráfica completa $H$, a la cual no se le puede agregar ningún otro vértice, que no este en ella, con las correspondientes aristas entre el y los vértices de esta, que haga que la nueva gráfica sea completa.
+
+\begin{example}
+Los clanes de la gráfica~\ref{grafclan}, son las subgráfica de la figura~\ref{clanes}. Tiene un clan isomorfo a $K_4$ y tres isomorfos a $K_3$. 
+
+
+
+
+
+
+\begin{figure}
+\centering
+ \begin{tikzpicture}
+ \SetVertexNoLabel
+
+\SetUpVertex[MinSize=1.5pt]
+ \grCycle[RA=3,prefix=v]{8}
+
+ \foreach \y in {0,1,...,7}{%
+\setcounter{in}{\y} \stepcounter{in}
+   \draw (v\y) node[below right]{$\alph{in}$};
+}
+
+
+ \Edges(v1,v3,v7,v1,v5,v3)
+ \Edges(v5,v7)
+ \end{tikzpicture}
+ \caption{} \label{grafclan}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}
+\centering
+ \begin{tikzpicture}
+ \SetVertexNoLabel
+\SetUpVertex[MinSize=1.5pt]
+
+ \grEmptyPath*[x=0,y=0,RA=2,prefix=v]{,,,}
+ \grEmptyPath*[x=1,y=2,RA=4,prefix=w]{,}
+ \grEmptyPath*[x=0,y=3,RA=2,prefix=x]{,,,}
+ \grEmptyPath*[x=0,y=5,RA=2,prefix=y]{,}
+ \Vertex[x=5,y=5]{z0}
+
+
+
+%\AssignVertexLabel {v}{$v_1$,$v_2$}
+% \Edges(v0,v1)
+ %\Edges[color=Brown](a3;0,v0,a3;4)
+
+ \Edges(v0,v1,w0,v0)
+ \Edges(v2,v3,w1,v2)
+ \Edges(x0,x1,y1,x0,y0,x1)
+ \Edges(y0,y1)
+ \Edges(x2,x3,z0,x2)
+% \Edges[style={bend left=30},color=blue](a3;4,a3;8)
+
+
+\end{tikzpicture}
+\caption{Clanes de la gráfica\ref{grafclan}}\label{clanes}
+\end{figure}
+
+
+\end{example}
+
+
+
+\begin{definition}\textbf{Gráfica de Clanes de H}\\\index{Gráfica de Clanes de H}
+La gráfica de clanes de $H$ es la gráfica $K(G)$,tal que: 
+\begin{enumerate}
+\item $V(K(G)=\{Q\subseteq V(G)$ tal que $Q$ es clan de $ G\}$ 
+\item $E(K(G)=\{\{Q_1,Q_2\}$ tal que $Q_1 \ne Q_2,Q_1\cap Q_2 \ne\emptyset\} $ 
+\end{enumerate}
+entonces a $K(G)$ se le conoce como gráfica de clanes de $G$.
+\end{definition}
+
+
+
+
+\begin{definition}\textbf{Gráficas iteradas de clanes}\\\index{Gráficas iteradas de clanes}
+Las Gráficas itaradas de clanes se definen como:
+ 
+\begin{enumerate}
+\item $k^0(G)=G$, $k^n(G)=k(k^{n-1}(G))$, $n\ge 1$
+\end{enumerate}
+
+\end{definition}
+
+\begin{definition}\textbf{Bipartita}\\\index{Bipartita}
+Sea $B$ una gráfica, si existen conjuntos $A$ y $B$ de $V(B)$ tales que 
+\begin{enumerate}
+\item $V(A)=A\cup B$ y $A\cap B=\empty$ 
+\item Si $x\sim y$ entonces $x\in A$ y $y\in B$ o viceversa
+\end{enumerate}
+entonces a $B$ se le conoce como gráfica bipartita.
+\end{definition}
+
+En este caso, se dice que los conjuntos $A$ y $B$ son una bipartición\index{Bipartición} de $B$ y se denota por $B(X,Y)$. Además los vértices de $B$ se pueden colorear con dos colores, sin que una arista tenga el mismo color en ambos extremos. Si los vértices en $A$ se colorean con el color uno, y los de $B$ con el dos, se tiene lo deseado, pues no existe arista entre dos elementos del mismo conjunto.
+
+
+
+\begin{definition}\textbf{Bipartita completa}\\\index{Bipartita completa}
+Dados $m,n\geq 1$, la gráfica bipartita completa $K_{m,n}$ se define
+como $K_{m,n}=\overline{K_m \cup K_n}$
+\end{definition}
+
+
+\begin{definition}\textbf{Bipartita clánica}\\\index{Bipartita clánica}
+Sea $Cl_G:=\{H \mid H$ es un clan de una gráfica $G \}$. Se define la gráfica bipartita clánica $BC_G$, de una gráfica $G$, como $V(BC_G)=V(G)\dot{\cup}Cl_G$ donde $x,y\in V(BC_G)$ son adyacentes si y solo si $x\in V(G)$ y $y$ es un clan de $G$ tales que $x\in y$ o viceversa.   
+\end{definition}
+
+En otras palabras, la gráfica bipartita clánica es aquella cuyos vértices están asociados a los elementos de $V(G)$ y a los clanes de $G$,de manera disjunta.Donde las aristas que existen se dan solo entre un elemento asociado a un vértices y otro asociado a un clan. La figura~\ref{BCG} es la gráfica bipartita clánica de la gráfica~\ref{grafclan}.
+
+
+
+
+
+\begin{figure}
+\centering
+ \begin{tikzpicture}
+ \SetVertexNoLabel
+\SetUpVertex[MinSize=1.5pt]
+
+ \grEmptyPath*[x=0,y=3,RA=2,prefix=v]{,,,,,,,}
+ \grEmptyPath*[x=1,y=0,RA=3,prefix=w]{,,,,}
+
+
+
+ \foreach \y in {0,1,...,7}{%
+\setcounter{in}{\y} \stepcounter{in}
+   \draw (v\y) node[above right]{$\alph{in}$};
+}
+
+ \Edges(v0,w0,v1,w0,v7)
+ \Edges(v1,w1,v2,w1,v3)
+ \Edges(v3,w3,v4,w3,v5)
+
+ \Edges(v5,w4,v6,w4,v7)
+
+ \Edges(v1,w2,v3,w2,v5,w2,v7)
+% \Edges[style={bend left=30},color=blue](a3;4,a3;8)
+\draw(1,-.5) node {$K_3$};
+   \draw(4,-.5) node {$K_3$};
+    \draw(7,-.5) node {$K_4$};
+     \draw(10,-.5) node {$K_3$};
+  \draw(13,-.5) node {$K_3$};
+
+\end{tikzpicture}
+\caption{Gráfica bipartita clánica de \ref{grafclan}}\label{BCG}
+\end{figure}
+
+
+
+
+
+
+\begin{definition}\textbf{Subgráfica inducida}\\\index{Subgráfica inducida}
+La subgráfica $H$ de $G$ se dice inducida si $\{x,y\}\in V(H)^{(2)}\cap
+E(G)$ entonces $\{x,y\}\in E(H)$.
+\end{definition}
+
+Una subgráfica inducida esta determinada por su conjunto de
+vértices. Si $X\in V(G)$, la subgráfica de $G$ inducida por $X$ se
+denota por $G[X]$.
+
+\begin{proposition}\textbf{}\\
+Si $G$ y $H$ son gráficas isomorfas, y la gráfica $L$ es subgráfica
+de $G$ entonces $H$ tiene una subgráfica isomorfa a $L$.
+\end{proposition}
+
+Demostración: Sea $\varphi : G \rightarrow H$ un isomorfismo entre G
+y H, una subgráfica de $H$ isomorfa a $L$ es la gráfica inducida por
+$\varphi (V(L))$, si $x\sim y$ en $L\subset G$ entonces $\varphi
+(x)\sim \varphi (y)$ en H.
+
+
+
+
+
+\chapter{Conclusiones}
+
+AQUI VAN LAS CONCLUSIONES
+
+\begin{thebibliography}{0}
+
+
+\bibitem{Ehrlich}
+Ehrlich, Gertrude. \emph{ Fundamental Concepts of Abstract Algebra}. PWS-KENT Publishing Company, 1991.
+
+\bibitem{Barrera}
+Barrera Mora, Fernando. \emph{ Introduccion a la Teoria de Grupos}. UAEH-SMM, septiembre 2004.
+
+\bibitem{Harary}
+F. Harary, \emph{ Graph Theory}, Addison-Wesley, Reading, MA. 1969.
+
+\bibitem{9jaula}
+Gunnar Brinkmann, Brenda D. McKay, and Carsten Saager. \emph{ The smallest cubic graf of girth nine}. 
+
+\bibitem{cuellogrande}
+Biggs, Norman. \emph{Construction for cubic graph with large girth}. Agosto 1998. 
+
+\bibitem{survey}
+Wong, Pak-Ken . \emph{Cage-A survey}. Journal of Graph Theory, Vol. 6 (1982) 1-22.
+
+\end{thebibliography}
+
+
+
+\printindex
+
+
+
+\end{document}
