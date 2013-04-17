@@ -3,7 +3,7 @@
 \usepackage{amssymb,latexsym}
 \usepackage{graphicx}
 \usepackage[spanish,mexico,es-nolayout]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -17,14 +17,14 @@
 
 \newtheorem{theorem}{Teorema}
 \newtheorem{corollary}{Corolario}
-\newtheorem{proposition}{ProposiciÛn}
+\newtheorem{proposition}{Proposici√≥n} 
 
 \theoremstyle{definition}
 
-\newtheorem{definition}{DefiniciÛn}
-\newtheorem{notation}{NotaciÛn}
+\newtheorem{definition}{Definici√≥n}
+\newtheorem{notation}{Notaci√≥n}
 \newtheorem{example}{Ejemplo}
-\newtheorem{demostration}{DemostraciÛn}
+\newtheorem{demostration}{Demostraci√≥n}
 \newcommand{\beao}{\begin{eqnarray*}} %Para centrar y no enumerar ecuaciones
 \newcommand{\eeao}{\end{eqnarray*}}
 \newcommand{\bea}{\begin{eqnarray}}   %Para centrar y enumerar ecuaciones
@@ -44,7 +44,7 @@
 \begin{document}
 
 \title{Title}
-\author{Jes˙s SimÛn MejÌa Cruz}
+\author{Jes√∫s Sim√≥n Mej√≠a Cruz}
 \date{}
 \maketitle
 
@@ -64,7 +64,7 @@ Probando git.
 
 
 
- \chapter{IntroducciÛn}
+ \chapter{Introducci√≥n}
 
 La grafic
 
@@ -76,21 +76,21 @@ La grafic
 
 
 
-\chapter{Conceptos b·sicos}
+\chapter{Conceptos b√°sicos}
 
 Aqui va una introduccion a los conceptos basicos
 
 
-\section{Gr·ficas}
+\section{Gr√°ficas}
 
-En esta secciÛn se encuentran algunas definiciones necesarias de la teoria de gr·ficas.
+En esta secci√≥n se encuentran algunas definiciones necesarias de la teoria de gr√°ficas.
 
 
-\begin{definition}\textbf{Gr·fica}\index{Gr·ficas}
+\begin{definition}\textbf{Gr√°fica}\index{Gr√°ficas}
 
-Una gr·fica $G$ es un par ordenado de conjuntos
+Una gr√°fica $G$ es un par ordenado de conjuntos
 $G=\{V(G),E(G)\}$ donde $V(G)$ es un conjunto
-finito, llamado vÈrtices de $G$, y
+finito, llamado v√©rtices de $G$, y
 
 \begin{equation*}
  E(G) \subseteq
@@ -99,8 +99,8 @@ V(G)^{(2)}=\{e\subseteq V(G) \mid |e|=2\}
 \end{definition}
 
 
-\begin{definition}\textbf{Complemento de una gr·fica}\\\index{Complemento de una gr·fica}
-Si G es una gr·fica, definimos $\overline{G}$, el complemento de G
+\begin{definition}\textbf{Complemento de una gr√°fica}\\\index{Complemento de una gr√°fica}
+Si G es una gr√°fica, definimos $\overline{G}$, el complemento de G
 como
 
 \begin{equation*}
@@ -111,31 +111,31 @@ E(\overline{G})=V(G)^{(2)}\setminus E(G)
 
 
 
-\begin{definition}\textbf{Orden de una gr·fica}\\\index{Orden de una gr·fica}
-El orden $|G|$ de una gr·fica $G$ es $|V(G)|$.
+\begin{definition}\textbf{Orden de una gr√°fica}\\\index{Orden de una gr√°fica}
+El orden $|G|$ de una gr√°fica $G$ es $|V(G)|$.
 \end{definition}
 
-\begin{definition}\textbf{VÈrtices adyacentes}\\\index{VÈrtices adyacentes}
-Sea $G$ una gr·fica, si $x , y \in V(G)$ tal que
+\begin{definition}\textbf{V√©rtices adyacentes}\\\index{V√©rtices adyacentes}
+Sea $G$ una gr√°fica, si $x , y \in V(G)$ tal que
 $\{x,y\}\in E(G)$ diremos que $x$ y $y$ son adyacentes.
 \end{definition}
 
-En algunas ocasiones, aunque de manera no tan formal, tambiÈn se les
+En algunas ocasiones, aunque de manera no tan formal, tambi√©n se les
 conoce como vecinos o amigos.
 
 
 
 
 \begin{definition}\textbf{Isomorfismo}\\\index{Isomorfismo}
-Sean $G_1,G_2$ dos gr·ficas, un isomorfismo de
-$G_1,G_2$ es una funciÛn biyectiva $f:
+Sean $G_1,G_2$ dos gr√°ficas, un isomorfismo de
+$G_1,G_2$ es una funci√≥n biyectiva $f:
 V(G_1)\rightarrow V(G_2)$ tal que $x\thicksim y$ en
 $G_1$ si y solo si $f(x)\thicksim f(y)$ en $G_2$.
 \end{definition}
 
 
-\begin{definition}\textbf{Gr·ficas isomorfas}\\\index{Gr·ficas isomorfas}
-Sean $G_1,G_2$ dos gr·ficas, si existe un isomorfismo
+\begin{definition}\textbf{Gr√°ficas isomorfas}\\\index{Gr√°ficas isomorfas}
+Sean $G_1,G_2$ dos gr√°ficas, si existe un isomorfismo
 entre $G_1$ y $G_2$, decimos que $G_1$ y $G_2$
 son isomorfas.
 \end{definition}
@@ -150,18 +150,18 @@ $G$.
 
 
 
-\subsection{Familias de gr·ficas}
+\subsection{Familias de gr√°ficas}
 
 
-\begin{definition}\textbf{Gr·fica completa}\\\index{Gr·fica completa}
-La gr·fica con n vÈrtices y todas las aristas posibles se llama
-gr·fica completa y se denota $K_n$ con $n\geq 1$.
+\begin{definition}\textbf{Gr√°fica completa}\\\index{Gr√°fica completa}
+La gr√°fica con n v√©rtices y todas las aristas posibles se llama
+gr√°fica completa y se denota $K_n$ con $n\geq 1$.
 \end{definition}
 
 
 
-\begin{definition}\textbf{UniÛn disjunta}\\\index{UniÛn disjunta}
-Dadas dos gr·ficas $G$ y $H$, definimos la uniÛn disjunta $G\cup H$ como
+\begin{definition}\textbf{Uni√≥n disjunta}\\\index{Uni√≥n disjunta}
+Dadas dos gr√°ficas $G$ y $H$, definimos la uni√≥n disjunta $G\cup H$ como
 $$V(G\cup H)=V(G)\dot{\cup}V(H)$$ $$E(G\cup H)=E(G)\dot{\cup}E(H)$$
 \end{definition}
 
@@ -170,29 +170,34 @@ n veces, se denota $nG$. \index{nG}
 
 
 
-\begin{definition}\textbf{Gr·fica $nK_m$}\\\index{Gr·fica nK_m}
-A la uniÛn disjunta de n gr·ficas $K_m$, se le denota por $nK_m$
+\begin{definition}\textbf{Gr√°fica $nK_m$}\\\index{Gr√°fica nK_m}
+A la uni√≥n disjunta de n gr√°ficas $K_m$, se le denota por $nK_m$
 \end{definition}
 
 
-\begin{definition}\textbf{Subgr·fica}\\\index{Subgr·fica}
-Una gr·fica $H$ es subgr·fica de $G$ si $V(H)\subseteq V(G)$ y
+\begin{definition}\textbf{Subgr√°fica}\\\index{Subgr√°fica}
+Una gr√°fica $H$ es subgr√°fica de $G$ si $V(H)\subseteq V(G)$ y
 $E(H)\subseteq E(G)$.
 \end{definition}
 
 
-
+ 
 
 \subsection{Clanes}
 
 \begin{definition}\textbf{Clan}\\\index{Clan}
-Un clan es una subgr·fica completa maximal.
+Un clan es una subgr√°fica completa maximal.
 \end{definition}
 
-Es decir, es una subgr·fica completa $H$, a la cual no se le puede agregar ning˙n otro vÈrtice, que no este en ella, con las correspondientes aristas entre el y los vÈrtices de esta, que haga que la nueva gr·fica sea completa.
+Es decir, es una subgr√°fica completa $H$, a la cual no se le puede
+agregar ning√∫n otro v√©rtice, que no este en ella, con las
+correspondientes aristas entre el y los v√©rtices de esta, que haga que
+la nueva gr√°fica sea completa.
 
 \begin{example}
-Los clanes de la gr·fica~\ref{grafclan}, son las subgr·fica de la figura~\ref{clanes}. Tiene un clan isomorfo a $K_4$ y tres isomorfos a $K_3$. 
+  Los clanes de la gr√°fica~\ref{grafclan}, son las subgr√°fica de la
+  figura~\ref{clanes}. Tiene un clan isomorfo a $K_4$ y tres isomorfos
+  a $K_3$.
 
 
 
@@ -251,7 +256,7 @@ Los clanes de la gr·fica~\ref{grafclan}, son las subgr·fica de la figura~\ref{cl
 
 
 \end{tikzpicture}
-\caption{Clanes de la gr·fica\ref{grafclan}}\label{clanes}
+\caption{Clanes de la gr√°fica\ref{grafclan}}\label{clanes}
 \end{figure}
 
 
@@ -259,20 +264,20 @@ Los clanes de la gr·fica~\ref{grafclan}, son las subgr·fica de la figura~\ref{cl
 
 
 
-\begin{definition}\textbf{Gr·fica de Clanes de H}\\\index{Gr·fica de Clanes de H}
-La gr·fica de clanes de $H$ es la gr·fica $K(G)$,tal que: 
+\begin{definition}\textbf{Gr√°fica de Clanes de H}\\\index{Gr√°fica de Clanes de H}
+La gr√°fica de clanes de $H$ es la gr√°fica $K(G)$,tal que: 
 \begin{enumerate}
 \item $V(K(G)=\{Q\subseteq V(G)$ tal que $Q$ es clan de $ G\}$ 
 \item $E(K(G)=\{\{Q_1,Q_2\}$ tal que $Q_1 \ne Q_2,Q_1\cap Q_2 \ne\emptyset\} $ 
 \end{enumerate}
-entonces a $K(G)$ se le conoce como gr·fica de clanes de $G$.
+entonces a $K(G)$ se le conoce como gr√°fica de clanes de $G$.
 \end{definition}
 
 
 
 
-\begin{definition}\textbf{Gr·ficas iteradas de clanes}\\\index{Gr·ficas iteradas de clanes}
-Las Gr·ficas itaradas de clanes se definen como:
+\begin{definition}\textbf{Gr√°ficas iteradas de clanes}\\\index{Gr√°ficas iteradas de clanes}
+Las Gr√°ficas itaradas de clanes se definen como:
  
 \begin{enumerate}
 \item $k^0(G)=G$, $k^n(G)=k(k^{n-1}(G))$, $n\ge 1$
@@ -281,29 +286,29 @@ Las Gr·ficas itaradas de clanes se definen como:
 \end{definition}
 
 \begin{definition}\textbf{Bipartita}\\\index{Bipartita}
-Sea $B$ una gr·fica, si existen conjuntos $A$ y $B$ de $V(B)$ tales que 
+Sea $B$ una gr√°fica, si existen conjuntos $A$ y $B$ de $V(B)$ tales que 
 \begin{enumerate}
 \item $V(A)=A\cup B$ y $A\cap B=\empty$ 
 \item Si $x\sim y$ entonces $x\in A$ y $y\in B$ o viceversa
 \end{enumerate}
-entonces a $B$ se le conoce como gr·fica bipartita.
+entonces a $B$ se le conoce como gr√°fica bipartita.
 \end{definition}
 
-En este caso, se dice que los conjuntos $A$ y $B$ son una biparticiÛn\index{BiparticiÛn} de $B$ y se denota por $B(X,Y)$. Adem·s los vÈrtices de $B$ se pueden colorear con dos colores, sin que una arista tenga el mismo color en ambos extremos. Si los vÈrtices en $A$ se colorean con el color uno, y los de $B$ con el dos, se tiene lo deseado, pues no existe arista entre dos elementos del mismo conjunto.
+En este caso, se dice que los conjuntos $A$ y $B$ son una bipartici√≥n\index{Bipartici√≥n} de $B$ y se denota por $B(X,Y)$. Adem√°s los v√©rtices de $B$ se pueden colorear con dos colores, sin que una arista tenga el mismo color en ambos extremos. Si los v√©rtices en $A$ se colorean con el color uno, y los de $B$ con el dos, se tiene lo deseado, pues no existe arista entre dos elementos del mismo conjunto.
 
 
 
 \begin{definition}\textbf{Bipartita completa}\\\index{Bipartita completa}
-Dados $m,n\geq 1$, la gr·fica bipartita completa $K_{m,n}$ se define
+Dados $m,n\geq 1$, la gr√°fica bipartita completa $K_{m,n}$ se define
 como $K_{m,n}=\overline{K_m \cup K_n}$
 \end{definition}
 
 
-\begin{definition}\textbf{Bipartita cl·nica}\\\index{Bipartita cl·nica}
-Sea $Cl_G:=\{H \mid H$ es un clan de una gr·fica $G \}$. Se define la gr·fica bipartita cl·nica $BC_G$, de una gr·fica $G$, como $V(BC_G)=V(G)\dot{\cup}Cl_G$ donde $x,y\in V(BC_G)$ son adyacentes si y solo si $x\in V(G)$ y $y$ es un clan de $G$ tales que $x\in y$ o viceversa.   
+\begin{definition}\textbf{Bipartita cl√°nica}\\\index{Bipartita cl√°nica}
+Sea $Cl_G:=\{H \mid H$ es un clan de una gr√°fica $G \}$. Se define la gr√°fica bipartita cl√°nica $BC_G$, de una gr√°fica $G$, como $V(BC_G)=V(G)\dot{\cup}Cl_G$ donde $x,y\in V(BC_G)$ son adyacentes si y solo si $x\in V(G)$ y $y$ es un clan de $G$ tales que $x\in y$ o viceversa.   
 \end{definition}
 
-En otras palabras, la gr·fica bipartita cl·nica es aquella cuyos vÈrtices est·n asociados a los elementos de $V(G)$ y a los clanes de $G$,de manera disjunta.Donde las aristas que existen se dan solo entre un elemento asociado a un vÈrtices y otro asociado a un clan. La figura~\ref{BCG} es la gr·fica bipartita cl·nica de la gr·fica~\ref{grafclan}.
+En otras palabras, la gr√°fica bipartita cl√°nica es aquella cuyos v√©rtices est√°n asociados a los elementos de $V(G)$ y a los clanes de $G$,de manera disjunta.Donde las aristas que existen se dan solo entre un elemento asociado a un v√©rtices y otro asociado a un clan. La figura~\ref{BCG} es la gr√°fica bipartita cl√°nica de la gr√°fica~\ref{grafclan}.
 
 
 
@@ -340,7 +345,7 @@ En otras palabras, la gr·fica bipartita cl·nica es aquella cuyos vÈrtices est·n 
   \draw(13,-.5) node {$K_3$};
 
 \end{tikzpicture}
-\caption{Gr·fica bipartita cl·nica de \ref{grafclan}}\label{BCG}
+\caption{Gr√°fica bipartita cl√°nica de \ref{grafclan}}\label{BCG}
 \end{figure}
 
 
@@ -348,22 +353,22 @@ En otras palabras, la gr·fica bipartita cl·nica es aquella cuyos vÈrtices est·n 
 
 
 
-\begin{definition}\textbf{Subgr·fica inducida}\\\index{Subgr·fica inducida}
-La subgr·fica $H$ de $G$ se dice inducida si $\{x,y\}\in V(H)^{(2)}\cap
+\begin{definition}\textbf{Subgr√°fica inducida}\\\index{Subgr√°fica inducida}
+La subgr√°fica $H$ de $G$ se dice inducida si $\{x,y\}\in V(H)^{(2)}\cap
 E(G)$ entonces $\{x,y\}\in E(H)$.
 \end{definition}
 
-Una subgr·fica inducida esta determinada por su conjunto de
-vÈrtices. Si $X\in V(G)$, la subgr·fica de $G$ inducida por $X$ se
+Una subgr√°fica inducida esta determinada por su conjunto de
+v√©rtices. Si $X\in V(G)$, la subgr√°fica de $G$ inducida por $X$ se
 denota por $G[X]$.
 
 \begin{proposition}\textbf{}\\
-Si $G$ y $H$ son gr·ficas isomorfas, y la gr·fica $L$ es subgr·fica
-de $G$ entonces $H$ tiene una subgr·fica isomorfa a $L$.
+Si $G$ y $H$ son gr√°ficas isomorfas, y la gr√°fica $L$ es subgr√°fica
+de $G$ entonces $H$ tiene una subgr√°fica isomorfa a $L$.
 \end{proposition}
 
-DemostraciÛn: Sea $\varphi : G \rightarrow H$ un isomorfismo entre G
-y H, una subgr·fica de $H$ isomorfa a $L$ es la gr·fica inducida por
+Demostraci√≥n: Sea $\varphi : G \rightarrow H$ un isomorfismo entre G
+y H, una subgr√°fica de $H$ isomorfa a $L$ es la gr√°fica inducida por
 $\varphi (V(L))$, si $x\sim y$ en $L\subset G$ entonces $\varphi
 (x)\sim \varphi (y)$ en H.
 
